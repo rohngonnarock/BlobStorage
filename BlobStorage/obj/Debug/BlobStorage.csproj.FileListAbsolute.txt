@@ -124,3 +124,8 @@ C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\ko\System
 C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\ru\System.Spatial.resources.dll
 C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\Swashbuckle.Core.dll
+C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\WebActivatorEx.dll
+C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\System.IdentityModel.Tokens.Jwt.xml

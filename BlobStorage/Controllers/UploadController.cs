@@ -47,7 +47,7 @@ namespace BlobStorage.Controllers
                     //CloudBlobContainer blobContainer = blobStorage.GetCloudBlobContainer();
 
 
-                    string filename = blobStorage.GetReadData("M0JJ0v8.png");
+                    //string filename = blobStorage.GetReadData("M0JJ0v8.png");
                     string UploadedFileName = uploadedFile.FileName;
                     CloudBlockBlob blob = blobContainer.GetBlockBlobReference(UploadedFileName);
                     blob.UploadFromStream(uploadedFile.InputStream);
