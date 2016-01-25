@@ -129,3 +129,6 @@ C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\zh-Hant\S
 C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\obj\Release\BlobStorage.csprojResolveAssemblyReference.cache
 C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\obj\Release\BlobStorage.dll
 C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\obj\Release\BlobStorage.pdb
+C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\System.Web.Cors.dll
+C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\System.Web.Http.Cors.dll
+C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\System.Web.Http.Cors.xml

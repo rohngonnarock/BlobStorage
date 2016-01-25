@@ -114,7 +114,6 @@ C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\ko\System
 C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\ru\System.Spatial.resources.dll
 C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\zh-Hant\System.Spatial.resources.dll
-C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\obj\Debug\BlobStorage.csprojResolveAssemblyReference.cache
 C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\obj\Debug\BlobStorage.dll
 C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\obj\Debug\BlobStorage.pdb
 C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\roslyn\csc.exe
