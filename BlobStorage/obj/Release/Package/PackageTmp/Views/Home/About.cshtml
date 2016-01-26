@@ -6,6 +6,11 @@
 
 <p>Use this area to provide additional information.</p>
 
-<div ng-app="angularUploadApp" ng-controller="UploadCtrl">
-    <input type="file" ng-file-select="onFileSelect($files)" multiple>
+<div ng-app="angularUploadApp">
+    <div ng-controller="UploadCtrl">
+        <input type="file" ng-file-select="onFileSelect($files)" multiple>
+    </div>
+    <div ng-controller="ListController">
+        <button ng-click="getList()">GetList</button>
+    </div>
 </div>

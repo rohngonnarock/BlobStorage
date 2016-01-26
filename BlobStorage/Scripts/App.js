@@ -13,7 +13,7 @@ angular.module('angularUploadApp', [
                 var $file = $files[i];
                 (function (index) {
                     $scope.upload[index] = $upload.upload({
-                        url: "http://localhost:62378/api/files/upload", // webapi url
+                        url: "https://microsoft-apiapp55759bba47b74474bffa45d9538d840b.azurewebsites.net/api/files/upload", // webapi url
                         method: "POST",
                         data: { fileUploadObj: $scope.fileUploadObj },
                         file: $file
@@ -34,5 +34,21 @@ angular.module('angularUploadApp', [
         $scope.abortUpload = function (index) {
             $scope.upload[index].abort();
         }
-    });
+    })
 
+.controller('ListController', function ($scope, $http, $timeout, $upload) {
+    
+    $scope.getList = function () {
+        $http({
+            method: 'GET',
+            url: 'https://microsoft-apiapp55759bba47b74474bffa45d9538d840b.azurewebsites.net/api/ringtones'
+        }).then(function successCallback(response) {
+            console.log(response)
+            // this callback will be called asynchronously
+            // when the response is available
+        }, function errorCallback(response) {
+            // called asynchronously if an error occurs
+            // or server returns response with an error status.
+        });
+    }
+});

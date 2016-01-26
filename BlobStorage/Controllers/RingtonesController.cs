@@ -26,6 +26,37 @@ namespace BlobStorage.Controllers
             // Retrieve a reference to a container.
             CloudBlobContainer blobContainer = blobClient.GetContainerReference("ringtones");
 
+
+
+            // Loop over items within the container and output the length and URI.
+            foreach (IListBlobItem item in blobContainer.ListBlobs(null, false))
+            {
+                if (item.GetType() == typeof(CloudBlockBlob))
+                {
+                    CloudBlockBlob blob = (CloudBlockBlob)item;
+
+                    Console.WriteLine("Block blob of length {0}: {1}", blob.Properties.Length, blob.Uri);
+
+                }
+                else if (item.GetType() == typeof(CloudPageBlob))
+                {
+                    CloudPageBlob pageBlob = (CloudPageBlob)item;
+
+                    Console.WriteLine("Page blob of length {0}: {1}", pageBlob.Properties.Length, pageBlob.Uri);
+
+                }
+                else if (item.GetType() == typeof(CloudBlobDirectory))
+                {
+                    CloudBlobDirectory directory = (CloudBlobDirectory)item;
+
+                    Console.WriteLine("Directory: {0}", directory.Uri);
+                }
+            }
+
+
+
+
+
             // Create the container if it doesn't already exist.
             blobContainer.CreateIfNotExists();
 
