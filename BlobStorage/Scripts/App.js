@@ -38,6 +38,7 @@ angular.module('angularUploadApp', [
                 (function (index) {
                     $scope.upload[index] = $upload.upload({
                         url: "https://microsoft-apiapp55759bba47b74474bffa45d9538d840b.azurewebsites.net/api/files/upload", // webapi url
+                        //url: "http://localhost:62378/api/files/upload", // webapi url
                         method: "POST",
                         data: { fileUploadObj: $scope.fileUploadObj },
                         file: $file

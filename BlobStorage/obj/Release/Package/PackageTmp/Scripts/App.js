@@ -2,7 +2,31 @@
 angular.module('angularUploadApp', [
     'angularFileUpload'
 ])
-    .controller('UploadCtrl', function ($scope, $http, $timeout, $upload) {
+
+
+.factory('SonService', function ($http, $q) {
+    return {
+        getWeather: function () {
+            // the $http API is based on the deferred/promise APIs exposed by the $q service
+            // so it returns a promise for us by default
+            return $http.get('http://fishing-weather-api.com/sunday/afternoon')
+                .then(function (response) {
+                    if (typeof response.data === 'object') {
+                        return response.data;
+                    } else {
+                        // invalid response
+                        return $q.reject(response.data);
+                    }
+
+                }, function (response) {
+                    // something went wrong
+                    return $q.reject(response.data);
+                });
+        }
+    };
+})
+
+.controller('UploadCtrl', function ($scope, $http, $timeout, $upload) {
 
         $scope.upload = [];
         $scope.fileUploadObj = { testString1: "Test string 1", testString2: "Test string 2" };
@@ -14,6 +38,7 @@ angular.module('angularUploadApp', [
                 (function (index) {
                     $scope.upload[index] = $upload.upload({
                         url: "https://microsoft-apiapp55759bba47b74474bffa45d9538d840b.azurewebsites.net/api/files/upload", // webapi url
+                        //url: "http://localhost:62378/api/files/upload", // webapi url
                         method: "POST",
                         data: { fileUploadObj: $scope.fileUploadObj },
                         file: $file
@@ -36,8 +61,26 @@ angular.module('angularUploadApp', [
         }
     })
 
-.controller('ListController', function ($scope, $http, $timeout, $upload) {
-    
+.controller('ListController', function ($scope, $http, $timeout, $upload, SonService) {
+
+    var makePromiseWithSon = function () {
+        // This service's function returns a promise, but we'll deal with that shortly
+        SonService.getWeather()
+            // then() called when son gets back
+            .then(function (data) {
+                // promise fulfilled
+                if (data.forecast === 'good') {
+                    prepareFishingTrip();
+                } else {
+                    prepareSundayRoastDinner();
+                }
+            }, function (error) {
+                // promise rejected, could log the error with: console.log('error', error);
+                prepareSundayRoastDinner();
+            });
+    };
+
+
     $scope.getList = function () {
         $http({
             method: 'GET',

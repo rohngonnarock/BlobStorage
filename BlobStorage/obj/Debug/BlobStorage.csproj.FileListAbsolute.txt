@@ -294,3 +294,15 @@ C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\roslyn\Sy
 C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\roslyn\vbc.exe.config
 C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\roslyn\vbc.rsp
 C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\obj\Debug\BlobStorage.csprojResolveAssemblyReference.cache
+C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\FireSharp.dll
+C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\Microsoft.Threading.Tasks.dll
+C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\System.Net.Http.Extensions.dll
+C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\System.Net.Http.Primitives.dll
+C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\Microsoft.Threading.Tasks.xml
+C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\System.Net.Http.Extensions.xml
+C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\System.Net.Http.Primitives.xml
+C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\obj\Debug\BlobStorage.csproj.App.config
