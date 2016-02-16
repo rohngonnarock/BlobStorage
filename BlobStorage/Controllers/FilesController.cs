@@ -21,7 +21,6 @@ namespace BlobStorage.Controllers
 {
     public class FilesController : ApiController
     {
-
         [HttpPost] // This is from System.Web.Http, and not from System.Web.Mvc
         public async Task<HttpResponseMessage> Upload()
         {
@@ -70,39 +69,8 @@ namespace BlobStorage.Controllers
                     blob.UploadFromStream(fileStream);
                 }
 
-                IFirebaseConfig config = new FirebaseConfig
-                {
-                    AuthSecret = "Gg5t1fSLC0WWPVM1VMoNxlM29qO1s53dEso7Jrfp",
-                    BasePath = "https://ringtoneapp.firebaseio.com/"
-                };
-
-                IFirebaseClient client = new FirebaseClient(config);
-
-                var list = blobContainer.ListBlobs();
-
-                List<CloudBlockBlob> blobNames = list.OfType<CloudBlockBlob>().ToList();
-
-                // SET
-                var todo = new Todo {name = "Execute SET", priority = 2};
-
-                List<Todo> todoList = new List<Todo>();
-                foreach(var blb in blobNames)
-                {
-                    Todo td = new Todo();
-                    td.name = blb.Name;
-                    td.url = blb.Uri.AbsoluteUri.ToString();
-                    todoList.Add(td);
-                }
-
-
-                SetResponse response = await client.SetAsync("ringtones", todoList);
-               List<Todo> setresult = response.ResultAs<List<Todo>>();
-
-
-                //GET
-                //FirebaseResponse getresponse = await client.GetAsync("ringtones");
-                //List<Todo> gettodo = response.ResultAs<List<Todo>>(); //The response will contain the data being retreived
-
+                FirebaseCls cls = new FirebaseCls();
+                cls.UpdateFireblob(blobContainer);
 
                 // Through the request response you can return an object to the Angular controller
                 // You will be able to access this in the .success callback through its data attribute
@@ -149,8 +117,5 @@ namespace BlobStorage.Controllers
         {
             return fileData.Headers.ContentDisposition.FileName;
         }
-
-
-
     }
 }
