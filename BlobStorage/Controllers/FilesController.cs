@@ -61,13 +61,15 @@ namespace BlobStorage.Controllers
                 // Create the container if it doesn't already exist.
                 blobContainer.CreateIfNotExists();
 
-
                 //HttpPostedFileBase uploadedFile = result;
                 CloudBlockBlob blob = blobContainer.GetBlockBlobReference(originalFileName);
                 using (var fileStream = System.IO.File.OpenRead(uploadedFileInfo.FullName))
                 {
                     blob.UploadFromStream(fileStream);
                 }
+
+                // Adding Meta Information
+                Todo.AddContainerMetadata(blob, fileUploadObj);
 
                 FirebaseCls cls = new FirebaseCls();
                 cls.UpdateFireblob(blobContainer);

@@ -293,7 +293,6 @@ C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\roslyn\Sy
 C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\roslyn\System.IO.FileSystem.Primitives.dll
 C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\roslyn\vbc.exe.config
 C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\roslyn\vbc.rsp
-C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\obj\Debug\BlobStorage.csprojResolveAssemblyReference.cache
 C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\FireSharp.dll
 C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\Microsoft.Threading.Tasks.dll
 C:\Users\Rahul\Documents\GitHub\BiryaniApi\BlobStorage\BlobStorage\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
