@@ -1,2 +1,4 @@
 obj/
 obj\
+App_Data\Tmp\
+App_Data/Tmp/
