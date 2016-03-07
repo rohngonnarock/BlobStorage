@@ -86,6 +86,8 @@ namespace BlobStorage.Controllers
 
     public class FirebaseCls
     {
+        public static string FirebaseContainer { get; internal set; }
+
         public async Task UpdateFireblob(CloudBlobContainer blobContainer)
         {
 
@@ -123,7 +125,7 @@ namespace BlobStorage.Controllers
                     todoList.Add(td);
                 }
 
-                SetResponse response = await client.SetAsync("ringtones", todoList);
+                SetResponse response = await client.SetAsync(FirebaseContainer, todoList);
                 List<Todo> setresult = response.ResultAs<List<Todo>>();
             }
             catch (Exception e)

@@ -1,8 +1,4 @@
 ﻿using BlobStorage.Models;
-using FireSharp;
-using FireSharp.Config;
-using FireSharp.Interfaces;
-using FireSharp.Response;
 using Microsoft.Azure;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
@@ -19,10 +15,9 @@ using System.Web.Http;
 
 namespace BlobStorage.Controllers
 {
-    public class FilesController : ApiController
+    public class AdminFileController : ApiController
     {
-        [HttpPost] // This is from System.Web.Http, and not from System.Web.Mvc
-        public async Task<HttpResponseMessage> Upload()
+        public async Task<HttpResponseMessage> AdminUpload()
         {
             try
             {
@@ -56,7 +51,7 @@ namespace BlobStorage.Controllers
                 CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
 
                 // Retrieve a reference to a container.
-                CloudBlobContainer blobContainer = blobClient.GetContainerReference("user-ringtones");
+                CloudBlobContainer blobContainer = blobClient.GetContainerReference("ringtones");
 
                 // Create the container if it doesn't already exist.
                 blobContainer.CreateIfNotExists();
@@ -69,7 +64,7 @@ namespace BlobStorage.Controllers
                 }
 
                 // Adding Meta Information
-                FirebaseCls.FirebaseContainer = "user-ringtones";
+                FirebaseCls.FirebaseContainer = "ringtones";
                 Todo.AddContainerMetadata(blob, fileUploadObj);
 
                 FirebaseCls cls = new FirebaseCls();
